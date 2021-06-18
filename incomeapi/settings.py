@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'expenses',
     'drf_yasg',
-    'income'
+    'income',
+    'corsheaders',
+    'userstats',
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 MIDDLEWARE = [
@@ -54,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'incomeapi.urls'
